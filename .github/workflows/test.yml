@@ -8,7 +8,7 @@ jobs:
       - name: Print env vars before running tool
         run: env
       - name: Run branch-env-vars
-        uses: iamtheyammer/branch-env-vars@v1.2.0
+        uses: iamtheyammer/branch-env-vars@v1.2.1
         with:
           EXAMPLE: |
             main:valueformain
