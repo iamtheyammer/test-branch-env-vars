@@ -1,0 +1,20 @@
+name: Test branch-env-vars
+on: [push]
+description: Tests branch-env-vars issues
+
+jobs:
+  Test-Branch-Env-Vars:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print env vars before running tool
+        run: env
+      - name: Run branch-env-vars
+        uses: iamtheyammer/branch-env-vars@1.2.0
+        with:
+          EXAMPLE: |
+            main:valueformain
+            staging:valueforstaging
+      - name: Print env vars after running tool
+        run: env
+      - name: Test issue 17
+        run: echo "$EXAMPLE"
