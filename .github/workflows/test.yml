@@ -1,6 +1,5 @@
 name: Test branch-env-vars
 on: [push]
-description: Tests branch-env-vars issues
 
 jobs:
   Test-Branch-Env-Vars:
